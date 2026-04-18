@@ -1,78 +1,80 @@
-# klasifikasi-sentimen-ulasan-shopee
-Klasifikasi sentimen ulasan aplikasi Shopee di App Store.
+# Shopee Review Sentiment Classification
 
-Proyek ini bertujuan untuk melakukan **klasifikasi sentimen** pada ulasan aplikasi **Shopee** di **App Store**.  
-Analisis dilakukan untuk mengelompokkan ulasan pengguna ke dalam sentimen **positif**, **netral**, dan **negatif** menggunakan beberapa algoritma machine learning dan deep learning.
+This project aims to perform **sentiment classification** on **Indonesian-language reviews** of the **Shopee** application on the **App Store**.  
+The analysis is conducted to classify user reviews into **positive**, **neutral**, and **negative** sentiments using several machine learning and deep learning algorithms.
 
-## Latar Belakang
+## Background
 
-Ulasan pengguna di platform digital sangat penting untuk mengetahui kualitas layanan dan kepuasan pengguna. Dengan analisis sentimen, kumpulan ulasan dapat diolah menjadi informasi yang lebih terstruktur sehingga dapat membantu dalam evaluasi aplikasi.
+User reviews on digital platforms are very important for understanding service quality and user satisfaction. Through sentiment analysis, a collection of reviews can be transformed into more structured information, which can help evaluate an application.
 
-Pada proyek ini, data ulasan Shopee diproses melalui tahapan scraping, cleaning, preprocessing, hingga pelatihan model klasifikasi.
+In this project, Shopee review data is processed through several stages, including scraping, cleaning, preprocessing, and classification model training.
 
-## Tujuan Proyek
+## Project Objectives
 
-- Mengumpulkan data ulasan aplikasi Shopee
-- Membersihkan dan memproses teks ulasan
-- Melakukan klasifikasi sentimen ke dalam 3 kelas
-- Membandingkan performa beberapa algoritma
-- Menentukan model dengan hasil terbaik
+- Collect Shopee application review data
+- Clean and preprocess the review text
+- Perform sentiment classification into 3 classes
+- Compare the performance of several algorithms
+- Determine the best-performing model
 
-## Kategori Sentimen
+## Sentiment Categories
 
-Proyek ini menggunakan **3 kelas sentimen**, yaitu:
+This project uses **3 sentiment classes**, namely:
 
-- **Positif**
-- **Netral**
-- **Negatif**
+- **Positive**
+- **Neutral**
+- **Negative**
 
-## Alur Pengerjaan
+## Workflow
 
-1. **Scraping Data**  
-   Mengambil data ulasan aplikasi Shopee dari App Store.
+1. **Data Scraping**  
+   Collecting Indonesian-language Shopee application reviews from the App Store.
 
-2. **Cleaning & Preprocessing**  
-   Tahapan preprocessing yang dilakukan meliputi:
+2. **Cleaning and Preprocessing**  
+   The preprocessing steps include:
    - case folding
-   - cleaning text
-   - tokenizing
+   - text cleaning
+   - tokenization
    - stopword removal
    - stemming
 
-3. **Pelabelan Data**  
-   Data ulasan diberi label ke dalam tiga kategori sentimen: positif, netral, dan negatif.
+3. **Data Labeling**  
+   The review data is labeled into three sentiment categories: positive, neutral, and negative.
 
-4. **Training Model**  
-   Model yang digunakan:
+4. **Model Training**  
+   The models used are:
    - **SVM (Support Vector Machine)**
    - **Dense Neural Network**
    - **BiLSTM**
 
-5. **Evaluasi Model**  
-   Evaluasi dilakukan dengan membandingkan performa model dalam klasifikasi sentimen 3 kelas.
+5. **Model Evaluation**  
+   The evaluation is carried out by comparing the performance of the models in 3-class sentiment classification.
 
-## Algoritma yang Digunakan
+## Algorithms Used
 
 ### 1. Support Vector Machine (SVM)
-SVM digunakan sebagai model klasifikasi berbasis fitur teks hasil transformasi.
+
+SVM is used as a classification model based on transformed text features.
 
 ### 2. Dense Neural Network
-Model Dense Neural Network digunakan untuk mempelajari pola sentimen dari representasi fitur teks secara lebih kompleks.
+
+The Dense Neural Network model is used to learn sentiment patterns from text feature representations in a more complex way.
 
 ### 3. BiLSTM
-BiLSTM digunakan untuk menangkap konteks urutan kata dari teks ulasan sehingga mampu memahami pola bahasa secara lebih baik.
 
-## Hasil Akurasi
+BiLSTM is used to capture the contextual sequence of words in review texts, enabling it to better understand language patterns.
 
-Berdasarkan hasil pengujian, diperoleh performa model sebagai berikut:
+## Accuracy Results
 
-| Model | Akurasi Training | Akurasi Testing |
+Based on the test results, the model performances are as follows:
+
+| Model | Training Accuracy | Testing Accuracy |
 |------|------------------:|----------------:|
 | SVM | 96.9% | 88.93% |
 | Dense Neural Network | 99.29% | 92.10% |
 | BiLSTM | 98.34% | 93.4% |
 
-## Kesimpulan
+## Conclusion
 
-Dari hasil evaluasi, model **BiLSTM** memberikan performa terbaik pada data testing dibandingkan model lainnya.  
-Model ini mampu mencapai akurasi testing sekitar **93.4%**, sehingga dinilai paling baik dalam mengklasifikasikan sentimen ulasan Shopee ke dalam tiga kelas sentimen.
+Based on the evaluation results, the **BiLSTM** model achieved the best performance on the testing data compared to the other models.  
+This model reached a testing accuracy of approximately **93.4%**, making it the best model for classifying **Indonesian-language Shopee application reviews** into three sentiment classes.
